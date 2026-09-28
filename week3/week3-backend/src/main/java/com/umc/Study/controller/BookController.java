@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
+
 
 @RestController
 @RequestMapping("/books")
@@ -27,4 +29,11 @@ public class BookController {
         bookService.createBook(body);
         return "도서 등록이 완료되었습니다!";
     }
+
+    @GetMapping("/category/{categoryId}")   // pathVariable 써야함
+    public List<Map<String, Object>> getBooksByCategoryId(
+            @PathVariable("categoryId") Long categoryId) {
+        return bookService.getBooksByCategoryId(categoryId);
+    }
+
 }
