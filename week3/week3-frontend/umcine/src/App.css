@@ -104,71 +104,6 @@
   letter-spacing: -1.4px;
 }
 
-.movie-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  column-gap: 20px;
-  row-gap: 24px;
-}
-
-.movie-card {
-  min-width: 0;
-}
-
-.movie-poster-wrapper {
-  position: relative;
-}
-
-.movie-poster {
-  width: 100%;
-  aspect-ratio: 7 / 8;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.bookmark-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 36px;
-  padding: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  border-radius: 6px;
-  background: rgba(25, 27, 32, 0.72);
-}
-
-.bookmark-button img {
-  width: 22px;
-  height: 22px;
-  filter: invert(1);
-}
-
-.bookmark-button.is-bookmarked {
-  background: #2563eb;
-  border-color: #2563eb;
-}
-
-.bookmark-button:hover {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
-}
-
-.movie-card h2 {
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-.movie-card time {
-  display: block;
-  margin-top: 3px;
-  font-size: 12px;
-  line-height: 1.4;
-  color: #858b96;
-}
 
 .pagination {
   display: flex;
@@ -228,21 +163,9 @@
   text-decoration: underline;
 }
 
-/* 작은 화면에 적용할 규칙을 뒤에 작성해서 앞의 열 수를 덮어써요. */
-@media (max-width: 1024px) {
-  .movie-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 768px) {
   .page-container {
     width: calc(100% - 32px);
-  }
-
-  .movie-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 16px;
   }
 
   .header-content {
@@ -273,10 +196,6 @@
 }
 
 @media (max-width: 480px) {
-  .movie-grid {
-    grid-template-columns: 1fr;
-  }
-
   .pagination {
     gap: 6px;
   }

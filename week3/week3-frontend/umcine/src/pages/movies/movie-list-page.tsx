@@ -3,7 +3,6 @@ import MovieGrid from '../../components/movies/movie-grid';
 import Pagination from '../../components/movies/pagination';
 import { movies } from '../../data/movie';
 import type { Movie } from '../../types/movie';
-import '../../App.css';
 
 export function MovieListPage() {
     const [movieList, setMovieList] = useState<Movie[]>(movies);
@@ -23,6 +22,9 @@ export function MovieListPage() {
         <>
             <main className="movie-page page-container" id="movie-list">
                 <h1>영화 목록</h1>
+                {/*<div className="rounded-lg bg-blue-600 p-4 text-white">*/}
+                {/*    Tailwind 연결 확인*/}
+                {/*</div>*/}
                 <MovieGrid movies={movieList} onToggleBookmark={handleToggleBookmark} />
                 <Pagination />
             </main>
