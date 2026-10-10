@@ -1,0 +1,13 @@
+**/node_modules/
+**/dist/
+**/.tanstack/
+*.tsbuildinfo
+.DS_Store
+.idea/
+*.iml
+.gradle/
+build/
+out/
+.env
+.env.*
+!.env.example
