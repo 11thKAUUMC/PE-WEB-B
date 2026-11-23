@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    @apply bg-[#f6f7f9] text-[#191b20] antialiased;
+  }
+
+  #root {
+    @apply flex min-h-svh flex-col;
+  }
+
+  button {
+    @apply cursor-pointer disabled:cursor-default;
+  }
+
+  button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+    @apply outline-2 outline-offset-4 outline-blue-600;
+  }
+}
